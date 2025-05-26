@@ -1,4 +1,4 @@
-package clouds.space.composable.exploding
+package green.ijiwon.explosion
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Slider
+import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -53,7 +54,8 @@ fun BallsExplosion(
             Rect(
                 Offset.Zero,
                 Size(256.dp.toPx(), 256.dp.toPx())
-            )
+            ),
+            modifier = Modifier.size(256.dp),
         )
     }
 
@@ -79,7 +81,9 @@ fun BallsExplosion(
 @Composable
 private fun BallsExplosionPreview() {
     Column(
-        Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White),
         verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -89,25 +93,24 @@ private fun BallsExplosionPreview() {
             mutableFloatStateOf(0F)
         }
 
-        BallsExplosion(
-            controller = explosionController,
-            modifier = Modifier
-                .border(1.dp, Color.Red)
-                .size(256.dp),
-            // manualProgress = progress,
-        )
+        BallsExplosion(controller = explosionController)
 
         Slider(
             modifier = Modifier.padding(horizontal = 24.dp),
             value = progress,
             onValueChange = { progress = it },
-            valueRange = 0f..1f
+            valueRange = 0F..1F,
+            colors = SliderDefaults.colors(
+                thumbColor = Color.Black,
+                activeTrackColor = Color.Black,
+                inactiveTrackColor = Color.Black.copy(alpha = 0.05F),
+            ),
         )
 
         Box(
             modifier = Modifier
                 .clip(RoundedCornerShape(8.dp))
-                .background(Color.LightGray)
+                .background(Color.Black.copy(alpha = 0.05F))
                 .size(48.dp)
                 .clickable {
                     explosionController.explode()

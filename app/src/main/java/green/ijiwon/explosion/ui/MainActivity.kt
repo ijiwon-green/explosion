@@ -1,4 +1,4 @@
-package clouds.space.composable.exploding.ui
+package green.ijiwon.explosion.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import clouds.space.composable.exploding.ui.theme.ExplodingComposableTheme
+import green.ijiwon.explosion.ui.theme.ExplodingComposableTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

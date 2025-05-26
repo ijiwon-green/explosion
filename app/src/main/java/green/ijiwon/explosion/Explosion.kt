@@ -1,4 +1,4 @@
-package clouds.space.composable.exploding
+package green.ijiwon.explosion
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.runtime.Composable

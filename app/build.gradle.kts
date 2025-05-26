@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "clouds.space.composable.exploding"
+    namespace = "green.ijiwon.explosion"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "clouds.space.composable.exploding"
+        applicationId = "green.ijiwon.explosion"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

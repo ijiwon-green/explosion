@@ -1,4 +1,4 @@
-package clouds.space.composable.exploding
+package green.ijiwon.explosion
 
 import org.junit.Test
 

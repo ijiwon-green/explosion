@@ -1,4 +1,4 @@
-package clouds.space.composable.exploding.ui.theme
+package green.ijiwon.explosion.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ExplodingComposable"
+rootProject.name = "Explosion"
 include(":app")
  
