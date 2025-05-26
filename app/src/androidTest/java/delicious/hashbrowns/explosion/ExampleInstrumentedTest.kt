@@ -1,4 +1,4 @@
-package green.ijiwon.explosion
+package delicious.hashbrowns.explosion
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

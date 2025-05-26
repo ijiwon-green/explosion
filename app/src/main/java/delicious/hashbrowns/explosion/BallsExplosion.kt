@@ -1,9 +1,8 @@
-package green.ijiwon.explosion
+package delicious.hashbrowns.explosion
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -60,7 +59,7 @@ fun BallsExplosion(
     }
 
     LaunchedEffect(Unit) {
-        controller.explosionRequests.collect { request ->
+        controller.request.collect { request ->
             when (request) {
                 ExplosionRequest.EXPLODE -> {
                     coroutineScope.launch {

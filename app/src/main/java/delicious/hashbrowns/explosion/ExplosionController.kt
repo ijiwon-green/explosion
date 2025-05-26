@@ -1,4 +1,4 @@
-package green.ijiwon.explosion
+package delicious.hashbrowns.explosion
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -8,20 +8,20 @@ import kotlinx.coroutines.flow.SharedFlow
 
 class ExplosionController {
 
-    private val _explosionRequests = MutableSharedFlow<ExplosionRequest>(
+    private val _request = MutableSharedFlow<ExplosionRequest>(
         replay = 0,
         extraBufferCapacity = 1,
         onBufferOverflow = BufferOverflow.DROP_LATEST,
     )
 
-    internal val explosionRequests: SharedFlow<ExplosionRequest> = _explosionRequests
+    internal val request: SharedFlow<ExplosionRequest> = _request
 
     fun explode() {
-        _explosionRequests.tryEmit(ExplosionRequest.EXPLODE)
+        _request.tryEmit(ExplosionRequest.EXPLODE)
     }
 
     fun reset() {
-        _explosionRequests.tryEmit(ExplosionRequest.RESET)
+        _request.tryEmit(ExplosionRequest.RESET)
     }
 }
 

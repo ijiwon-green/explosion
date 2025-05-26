@@ -1,4 +1,4 @@
-package green.ijiwon.explosion.ui.theme
+package delicious.hashbrowns.explosion.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

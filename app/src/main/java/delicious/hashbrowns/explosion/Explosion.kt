@@ -1,4 +1,4 @@
-package green.ijiwon.explosion
+package delicious.hashbrowns.explosion
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.runtime.Composable

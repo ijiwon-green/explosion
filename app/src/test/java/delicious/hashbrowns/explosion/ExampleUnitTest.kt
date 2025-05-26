@@ -1,4 +1,4 @@
-package green.ijiwon.explosion
+package delicious.hashbrowns.explosion
 
 import org.junit.Test
 

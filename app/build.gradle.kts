@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "green.ijiwon.explosion"
+    namespace = "delicious.hashbrowns.explosion"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "green.ijiwon.explosion"
+        applicationId = "delicious.hashbrowns.explosion"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
